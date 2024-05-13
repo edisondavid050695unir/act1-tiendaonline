@@ -1,0 +1,28 @@
+.products {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.products__header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products__categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+
+.category:hover {
+    background-color: #ddd;
+}

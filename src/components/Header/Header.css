@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* Ajusta el color de fondo si es necesario */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header__logo {
+    display: flex; /* Establece el contenedor como un flexbox */
+    align-items: center;
+}
+
+.header__title {
+    font-size: 28px;
+}
+
+.header__logo img {
+    height: 80px; /* Ajusta el tamaño según el tamaño de tu logo */
+}
+
+.header__cart {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__cart button {
+    padding: 8px 16px;
+    background-color: #6200EE; /* Ajusta el color del botón */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Ajusta el tamaño de la fuente según necesites */
+}
+
+.header__timer {
+    font-size: 16px; /* Ajusta el tamaño de la fuente según necesites */
+    color: #333; /* Ajusta el color de la fuente si es necesario */
+}
