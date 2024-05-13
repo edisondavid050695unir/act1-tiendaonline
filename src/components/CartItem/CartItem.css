@@ -1,0 +1,29 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative; /* Agrega posición relativa aquí */
+}
+
+.cart-item .faShoppingBag {
+    color: #333; /* Cambia el color según necesites */
+    margin-right: 5px;
+}
+
+.item-count {
+    background-color: #4CAF50; /* Color de fondo del círculo */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 14px;
+    margin-right: 5px;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alineación arriba */
+    transform: translate(50%, -50%); /* Ajuste fino para centrar el círculo */
+}
+
+.item-price {
+    color: #333; /* Color del texto del precio */
+    font-size: 16px;
+    margin-left: 30px; /* Ajusta según necesites para separar el precio del ícono */
+}
