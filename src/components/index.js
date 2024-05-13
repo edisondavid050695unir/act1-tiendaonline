@@ -5,3 +5,5 @@ export { default as Carousel } from './Carousel';
 export { default as Products } from './Products';
 export { default as NavigateProducts } from './NavigateProducts';
 export { default as Searcher } from './Searcher';
+export { default as FormContact } from './FormContact';
+export { default as CartItem } from './CartItem';

@@ -1,0 +1,46 @@
+.form-contact {
+    width: 80%;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-contact h3 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"] {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-contact textarea {
+    width: 100%;
+    height: 100px;
+    padding: 1px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.form-contact button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-contact button:hover {
+    background-color: #45a049;
+}
