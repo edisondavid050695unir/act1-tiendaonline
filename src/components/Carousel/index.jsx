@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Carousel.css'; // Asegúrate de crear este archivo CSS
+import './Carousel.css';
 
 const Carousel = ({ slides }) => {
     const [current, setCurrent] = useState(0);
@@ -19,14 +19,14 @@ const Carousel = ({ slides }) => {
 
     return (
         <div className='carousel'>
-            <span className='carousel__left-arrow' onClick={prevSlide}>&lsaquo;</span>
-            <span className='carousel__right-arrow' onClick={nextSlide}>&rsaquo;</span>
+            <span className='carousel__arrow carousel__arrow--left' onClick={prevSlide}>&lsaquo;</span>
+            <span className='carousel__arrow carousel__arrow--right' onClick={nextSlide}>&rsaquo;</span>
             {slides.map((slide, index) => (
-                <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                <div className={index === current ? 'carousel__slide carousel__slide--active' : 'carousel__slide'} key={index}>
                     {index === current && (
                         <>
-                            <img src={slide.image} alt={slide.caption} className='image' />
-                            <button className="slide__name">{slide.name}</button> {/* Button con el nombre */}
+                            <img src={slide.image} alt={slide.caption} className='carousel__image' />
+                            <button className="carousel__slide-name">{slide.name}</button>
                         </>
                     )}
                 </div>

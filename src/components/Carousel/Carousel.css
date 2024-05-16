@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.carousel__left-arrow, .carousel__right-arrow {
+.carousel__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -18,26 +18,26 @@
     padding: 10px;
 }
 
-.carousel__left-arrow {
+.carousel__arrow--left {
     left: 10px;
 }
 
-.carousel__right-arrow {
+.carousel__arrow--right {
     right: 10px;
 }
 
-.slide {
+.carousel__slide {
     opacity: 0;
     transition-duration: 1s ease;
 }
 
-.slide.active {
+.carousel__slide--active {
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);
 }
 
-.image {
+.carousel__image {
     width: 100%;
     height: 100vh;
     display: block;
@@ -49,20 +49,21 @@
     50% { opacity: 0; }
 }
 
-.slide__name {
+.carousel__slide-name {
     position: absolute;
-    bottom: 50px; /* Ajusta la posición desde el fondo del slide */
-    right: 20px; /* Cambia de 'left' a 'right' para moverlo al lado derecho */
-    background-color: black; /* Fondo negro */
-    color: white; /* Texto en blanco */
+    bottom: 50px;
+    right: 20px;
+    background-color: black;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transform: translateX(-50%) scale(1); /* Inicia sin escalar */
+    transform: scale(1);
     transition: transform 0.3s ease;
 }
-.slide__name:hover {
-    transform: translateX(-50%) scale(1.2);
+
+.carousel__slide-name:hover {
+    transform: scale(1.2);
 }

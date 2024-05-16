@@ -1,33 +1,33 @@
-.search-bar {
+.searcher__bar {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc; /* Bordes sencillos para la barra de búsqueda completa */
-    width: 55%; /* Establece el ancho al 25% del ancho total del viewport */
-    margin-left: auto; /* Alinea el contenedor hacia la derecha */
-    margin-right: 50px; /* Asegura algo de margen desde el borde derecho */
+    border: 1px solid #ccc;
+    width: 55%;
+    margin-left: auto;
+    margin-right: 50px;
 }
 
-.search-input {
-    flex-grow: 1; /* Hace que el input ocupe todo el espacio disponible */
+.searcher__input {
+    flex-grow: 1;
     border: none;
     padding: 10px;
-    font-size: 16px; /* Tamaño de fuente adecuado */
+    font-size: 16px;
 }
 
-.search-button {
-    background-color: #4CAF50; /* Color verde para el botón */
+.searcher__button {
+    background-color: #25D366;
     color: white;
     border: none;
     padding: 15px 20px;
     cursor: pointer;
-    font-size: 16px; /* Tamaño de fuente para el texto del botón */
-    outline: none; /* Remueve el outline al hacer focus */
+    font-size: 16px;
+    outline: none;
 }
 
-.search-button:hover {
-    background-color: #45a049; /* Un verde un poco más oscuro al pasar el mouse */
+.searcher__button:hover {
+    background-color: #128C7E;
 }
 
-.search-input:focus {
-    outline: none; /* Remueve el outline al estar enfocado */
+.searcher__input:focus {
+    outline: none;
 }

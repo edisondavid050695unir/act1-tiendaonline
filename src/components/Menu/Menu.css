@@ -1,27 +1,32 @@
-.menu-container {
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Ocupa el ancho completo */
-}
-
 .menu {
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos equitativamente */
-    background-color: transparent; /* Fondo transparente */
+    justify-content: center;
+    width: 100%; 
+    margin-top: 100px;
+}
+
+.menu__nav {
+    display: flex;
+    justify-content: space-around; 
+    background-color: transparent; 
     padding: 10px 20px;
-    max-width: 600px; /* Ajusta este valor según el ancho deseado */
+    max-width: 600px; 
 }
 
 .menu__link {
-    color: #050505;  /* Texto en blanco */
-    text-decoration: none;  /* Sin subrayado */
-    font-size: 16px;  /* Tamaño del texto */
-    font-weight: bold;  /* Texto en negrita */
-    padding: 8px 12px;  /* Espaciado alrededor del texto */
-    letter-spacing: 1px;  /* Espaciado entre caracteres */
-    transition: color 0.3s; /* Suaviza la transición del color */
+    color: #050505;  
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+    padding: 8px 12px;  
+    letter-spacing: 1px; 
+    transition: color 0.3s; 
 }
 
 .menu__link:hover, .menu__link:active {
-    color: #7FAD39;  /* Cambiar el color al pasar el mouse o hacer clic a verde */
+    color: #128C7E; 
+}
+
+.menu__link.active {
+    color: #008000; /* Color verde para el enlace activo */
 }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './FormContact.css'; // Asegúrate de crear este archivo para tus estilos
+import './FormContact.css';
+import { NotificationMessage } from '../../components';
+import useFormValidation from './CustomHook/useFormValidation';
 
 const FormContact = () => {
     const [formData, setFormData] = useState({
@@ -7,6 +9,8 @@ const FormContact = () => {
         email: '',
         message: ''
     });
+    const [isNotificationVisible, setIsNotificationVisible] = useState(false);
+    const [errors, validate] = useFormValidation(formData);
 
     const handleChange = (e) => {
         setFormData({
@@ -17,37 +21,52 @@ const FormContact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form Data:', formData);
-        // Aquí podrías añadir código para enviar los datos a un servidor
+        if (validate()) {
+            setIsNotificationVisible(true);
+        }
     };
 
     return (
-        <form onSubmit={handleSubmit} className="form-contact">
-            <h3>Leave Message</h3>
-            <div className="input-group">
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
+        <>
+            <form onSubmit={handleSubmit} className="form-contact">
+                <h3 className="form-contact__title">Leave Message</h3>
+                <div className="form-contact__input-group">
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Nombre"
+                        className="form-contact__input"
+                    />
+                    {errors.name && <span className="error">{errors.name}</span>}
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Correo Electrónico"
+                        className="form-contact__input"
+                    />
+                    {errors.email && <span className="error">{errors.email}</span>}
+                </div>
+                <textarea
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
-                    placeholder="Nombre"
+                    placeholder="Mensaje"
+                    className="form-contact__textarea"
                 />
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Correo Electronico"
+                {errors.message && <span className="error">{errors.message}</span>}
+                <button type="submit" className="form-contact__button">Enviar Mensaje</button>
+            </form>
+            {isNotificationVisible && (
+                <NotificationMessage 
+                    message="Mensaje enviado, pronto nos comunicaremos contigo." 
+                    onClose={() => setIsNotificationVisible(false)} 
                 />
-            </div>
-            <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Mensaje"
-            />
-            <button type="submit">Enviar Mensaje</button>
-        </form>
+            )}
+        </>
     );
 };
 

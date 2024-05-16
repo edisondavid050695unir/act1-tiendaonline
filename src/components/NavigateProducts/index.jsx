@@ -1,19 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './NavigateProducts.css';
 
-const  Home =()=> {
+const NavigateProducts = ({ onSelectCategory }) => {
+    const [activeCategory, setActiveCategory] = useState(null);
+
+    const handleCategoryClick = (category) => {
+        setActiveCategory(category);
+        onSelectCategory(category);
+    };
+
     return (
-        <div className="products">
-            <div className="products__header">
-                <div className="products__categories">
-                    <button className="category">Todo</button>
-                    <button className="category">Accesorios</button>
-                    <button className="category">Videos Juegos</button>
-                    <button className="category">Zapatos</button>
-                    <button className="category">Bicicletas</button>
+        <div className="navigate-products">
+            <div className="navigate-products__header">
+                <div className="navigate-products__categories">
+                    <button
+                        className={`navigate-products__category ${activeCategory === null ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick(null)}
+                    >
+                        Todo
+                    </button>
+                    <button
+                        className={`navigate-products__category ${activeCategory === 1 ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick(1)}
+                    >
+                        Accesorios
+                    </button>
+                    <button
+                        className={`navigate-products__category ${activeCategory === 2 ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick(2)}
+                    >
+                        Videojuegos
+                    </button>
+                    <button
+                        className={`navigate-products__category ${activeCategory === 3 ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick(3)}
+                    >
+                        Zapatos
+                    </button>
+                    <button
+                        className={`navigate-products__category ${activeCategory === 4 ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick(4)}
+                    >
+                        Bicicletas
+                    </button>
                 </div>
             </div>
-         </div>
+        </div>
     );
-}
+};
 
-export default Home;
+export default NavigateProducts;
