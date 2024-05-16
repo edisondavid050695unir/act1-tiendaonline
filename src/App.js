@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Shop, Contact, Blog } from "./Pages";
-import { Header, Footer, Menu } from "./components";
+import { Home, Shop, Contact, CartShop } from "./Pages";
+import { Header, Footer, Menu, CartItem } from "./components";
 
 function App() {
   return (
@@ -9,10 +9,11 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/Shop" element={<Shop />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/CartShop" element={<CartShop />} />
       </Routes>
+      <CartItem/>
       <Footer />
     </Router>
   );

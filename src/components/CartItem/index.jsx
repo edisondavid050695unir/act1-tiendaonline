@@ -1,14 +1,39 @@
-import React from 'react';
-import './CartItem.css'; // Asegúrate de tener este archivo CSS
+import React, { useState, useEffect } from 'react';
+import './CartItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
-const CartItem = ({ itemCount, totalPrice }) => {
+const CartItem = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="cart-item">
-      <FontAwesomeIcon icon={faShoppingBag} />
-      <span className="item-count">{itemCount}</span>
-      <span className="item-price">Total: ${totalPrice.toFixed(2)}</span>
+      {showButton && (
+        <button className="cart-item__scroll-to-top" onClick={scrollToTop}>
+          <FontAwesomeIcon icon={faArrowUp} />
+        </button>
+      )}
     </div>
   );
 };

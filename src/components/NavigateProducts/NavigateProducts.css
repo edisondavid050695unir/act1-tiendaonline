@@ -1,28 +1,34 @@
-.products {
+.navigate-products {
     padding: 20px;
     background-color: #fff;
 }
 
-.products__header {
+.navigate-products__header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.products__categories {
+.navigate-products__categories {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.category {
+.navigate-products__category {
     background-color: #f0f0f0;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
     font-weight: bold;
     color: #333;
+    transition: background-color 0.3s;
 }
 
-.category:hover {
+.navigate-products__category:hover {
     background-color: #ddd;
+}
+
+.navigate-products__category.active {
+    background-color: #25D366;
+    color: #fff;
 }

@@ -1,17 +1,17 @@
 import React from 'react';
 import './Header.css';
-import { CartItem } from "../../components";
+import { Whatshapp } from "../../components";
+import LogoOnlineStore from "../../static/shoplogo.png";
 
 const Header = () => {
-
     return (
         <header className="header">
-            <div className="header__logo">
-                <img src="https://praktiko1.s3.amazonaws.com/story-online.png" alt="ONLINE STORE ECUADOR" />
+            <div className="header__logo-container">
+                <img src={LogoOnlineStore} alt="ONLINE STORE ECUADOR" className="header__logo" />
                 <h1 className="header__title">Online Store Ecuador</h1>
             </div>
             <div className="header__cart">
-            <CartItem itemCount={3} totalPrice={150.00} />
+                <Whatshapp />
             </div>
         </header>
     );

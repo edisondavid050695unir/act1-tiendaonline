@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Searcher.css'; // Asegúrate de tener este archivo CSS en la misma carpeta del componente
+import './Searcher.css';
 
 const Searcher = ({ onSearch }) => {
     const [input, setInput] = useState('');
@@ -10,15 +10,15 @@ const Searcher = ({ onSearch }) => {
     };
 
     return (
-        <form className="search-bar" onSubmit={handleSubmit}>
+        <form className="searcher__bar" onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="¿Qué necesitas?"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="search-input"
+                className="searcher__input"
             />
-            <button type="submit" className="search-button">BUSCAR</button>
+            <button type="submit" className="searcher__button">BUSCAR</button>
         </form>
     );
 };
