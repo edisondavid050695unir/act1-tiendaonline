@@ -5,6 +5,7 @@
     width: 55%;
     margin-left: auto;
     margin-right: 50px;
+    transition: width 0.3s ease, margin 0.3s ease;
 }
 
 .searcher__input {
@@ -30,4 +31,12 @@
 
 .searcher__input:focus {
     outline: none;
+}
+
+@media (max-width: 768px) {
+    .searcher__bar {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
