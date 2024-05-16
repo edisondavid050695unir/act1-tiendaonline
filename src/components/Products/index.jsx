@@ -43,7 +43,7 @@ const Products = ({ products }) => {
                         <p className="products__price">${product.price}</p>
                         <button className="product__add-to-cart" onClick={() => handleAddToCart(product)}>
                             <FontAwesomeIcon icon={faShoppingBag} />
-                            Agregar al carrito
+                            AGREGAR A PEDIDO
                         </button>
                     </div>
                 ))}

@@ -28,5 +28,11 @@
 }
 
 .menu__link.active {
-    color: #008000; /* Color verde para el enlace activo */
+    color: #008000;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        margin-top: 130px;
+    }
 }

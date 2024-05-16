@@ -1,6 +1,7 @@
 .navigate-products {
     padding: 20px;
     background-color: #fff;
+    transition: width 0.3s ease, margin 0.3s ease;
 }
 
 .navigate-products__header {
@@ -12,6 +13,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .navigate-products__category {
@@ -31,4 +33,11 @@
 .navigate-products__category.active {
     background-color: #25D366;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navigate-products {
+        width: 90%;
+        margin: auto;
+    }
 }

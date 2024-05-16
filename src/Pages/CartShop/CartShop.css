@@ -2,6 +2,8 @@
     width: 80%;
     margin: 20px auto;
     font-family: Arial, sans-serif;
+    transition: width 0.3s ease, margin 0.3s ease;
+    overflow-x: auto;
 }
 
 .cart-shop__products {
@@ -94,4 +96,16 @@
 
 .cart-shop__purchase-button:hover {
     background-color: #128C7E;
+}
+
+@media (max-width: 768px) {
+    .cart-shop {
+        width: 90%;
+        margin: auto;
+        overflow-x: auto;
+    }
+
+    .cart-shop__table {
+        width: 100%;
+    }
 }
